@@ -15,7 +15,7 @@ module.exports = function(source) {
   // Compilation
   //
   // template  = hamlc.template(source, null, null, {placement: 'standalone', escapeHtml: false});
-	source = "- __ = { t: -> __.apply(__, arguments) } # needed for i18n translation\n" + source;
+	//source = "- __ = { t: -> __.apply(__, arguments) } # needed for i18n translation\n" + source;
 	template = hamlc.render(source, {}, {placement: 'standalone', escapeHtml: false, format: 'xhtml'});
 
 	// if it's react-template, remove quotes from attributes
